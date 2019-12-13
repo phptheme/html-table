@@ -1,9 +1,9 @@
 {
-    "name": "phptheme/table",
+    "name": "phptheme/html-table",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "PhpTheme\\Table\\" : ""
+            "PhpTheme\\Html\\" : ""
         }
     },
     "require": {

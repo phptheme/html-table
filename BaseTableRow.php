@@ -4,7 +4,7 @@
  * @license MIT
  * @link http://getphptheme.com
  */
-namespace PhpTheme\Table;
+namespace PhpTheme\Html;
 
 abstract class BaseTableRow extends Tag
 {

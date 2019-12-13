@@ -4,9 +4,7 @@
  * @license MIT
  * @link http://getphptheme.com
  */
-namespace PhpTheme\Table;
-
-use PhpTheme\Helpers\Html;
+namespace PhpTheme\Html;
 
 abstract class BaseTableHeader extends Tag
 {

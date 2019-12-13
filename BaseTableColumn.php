@@ -4,9 +4,8 @@
  * @license MIT
  * @link http://getphptheme.com
  */
-namespace PhpTheme\Table;
+namespace PhpTheme\Html;
 
-use PhpTheme\Html\HtmlHelper;
 use Closure;
 
 abstract class BaseTableColumn extends Tag
