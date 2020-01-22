@@ -8,7 +8,7 @@ namespace PhpTheme\Html;
 
 use Closure;
 
-abstract class BaseTableColumn extends Tag
+abstract class BaseTableColumn extends \PhpTheme\Core\Tag
 {
 
     public $table;

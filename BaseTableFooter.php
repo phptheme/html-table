@@ -8,7 +8,7 @@ namespace PhpTheme\Html;
 
 use PhpTheme\Html\HtmlHelper;
 
-abstract class BaseTableFooter extends Tag
+abstract class BaseTableFooter extends \PhpTheme\Core\Tag
 {
 
     const TABLE_ROW = TableRow::class;
