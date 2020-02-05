@@ -1,1 +1,1 @@
-# html-table
+# DEPRECATED

@@ -7,8 +7,6 @@
         }
     },
     "require": {
-        "phptheme/html": "*",
-        "phptheme/core": "*",
         "phptheme/tag": "*"
     }
 }

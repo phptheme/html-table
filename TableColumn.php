@@ -6,6 +6,20 @@
  */
 namespace PhpTheme\Html;
 
-class TableColumn extends BaseTableColumn
+use Closure;
+
+class TableColumn extends \PhpTheme\Tag\Tag
 {
+
+    public $table;
+
+    public $tag = 'td';
+
+    public function __construct(Table $table)
+    {
+        parent::__construct();
+
+        $this->table = $table;
+    }
+
 }
