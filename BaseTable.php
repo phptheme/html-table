@@ -8,7 +8,7 @@ namespace PhpTheme\Html;
 
 use Closure;
 
-abstract class BaseTable extends \PhpTheme\Core\Tag
+abstract class BaseTable extends \PhpTheme\Tag\Tag
 {
 
     const TABLE_HEADER = TableHeader::class;

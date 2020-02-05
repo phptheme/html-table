@@ -6,7 +6,7 @@
  */
 namespace PhpTheme\Html;
 
-abstract class BaseTableRow extends \PhpTheme\Core\Tag
+abstract class BaseTableRow extends \PhpTheme\Tag\Tag
 {
 
     public $tag = 'tr';

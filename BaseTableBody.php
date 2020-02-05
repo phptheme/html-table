@@ -6,7 +6,7 @@
  */
 namespace PhpTheme\Html;
 
-abstract class BaseTableBody extends \PhpTheme\Core\Tag
+abstract class BaseTableBody extends \PhpTheme\Tag\Tag
 {
 
     const TABLE_ROW = TableRow::class;
