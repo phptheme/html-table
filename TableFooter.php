@@ -4,9 +4,9 @@
  * @license MIT
  * @link http://getphptheme.com
  */
-namespace PhpTheme\Html;
+namespace PhpTheme\Table;
 
-use PhpTheme\Html\HtmlHelper;
+use PhpTheme\HtmlHelper\HtmlHelper;
 
 class TableFooter extends \PhpTheme\Tag\Tag
 {

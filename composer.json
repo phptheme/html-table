@@ -1,12 +1,13 @@
 {
-    "name": "phptheme/html-table",
+    "name": "phptheme/table",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "PhpTheme\\Html\\" : ""
+            "PhpTheme\\Table\\" : ""
         }
     },
     "require": {
-        "phptheme/tag": "*"
+        "phptheme/tag": "*",
+        "phptheme/html-helper": "*"
     }
 }

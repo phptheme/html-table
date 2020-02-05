@@ -4,7 +4,7 @@
  * @license MIT
  * @link http://getphptheme.com
  */
-namespace PhpTheme\Html;
+namespace PhpTheme\Table;
 
 class TableRow extends \PhpTheme\Tag\Tag
 {
