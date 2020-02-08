@@ -71,6 +71,43 @@ $table = new Table([
 echo $table->toString();
 ```
 
+####Result HTML:
+
+```
+<table class="class_1 class_2">'
+    <thead>
+        <tr>
+            <th>head_1_1</th>
+            <th>head_1_2</th>
+        </tr>
+        <tr>
+            <th>head_2_1</th>
+            <th>head_2_2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>col_1_1</td>
+            <td>col_1_2</td>
+        </tr>
+        <tr>
+            <td>col_2_1</td>
+            <td>col_2_2</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>foot_1_1</td>
+            <td>foot_1_2</td>
+        </tr>
+        <tr>
+            <td>foot_2_1</td>
+            <td>foot_2_2</td>
+        </tr>
+    </tfoot>
+</table>
+```
+
 ## Testing
 
 #### Windows
