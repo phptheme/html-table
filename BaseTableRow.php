@@ -6,7 +6,9 @@
  */
 namespace PhpTheme\Table;
 
-class TableRow extends \PhpTheme\Tag\Tag
+use PhpTheme\HtmlHelper\HtmlHelper;
+
+abstract class BaseTableRow extends \PhpTheme\Widget\Widget
 {
 
     public $tag = 'tr';
@@ -15,15 +17,45 @@ class TableRow extends \PhpTheme\Tag\Tag
 
     public $columnOptions = [];
 
-    protected $_table;
+    public $defaultColumnOptions = [];
+
+    protected $_group;
 
     protected $_columns;
 
-    public function __construct($table)
+    public function __construct(array $params = [], BaseTableGroup $group = null)
     {
-        parent::__construct();
+        parent::__construct($params);
 
-        $this->_table = $table;
+        $this->_group = $group;
+    }
+
+    public function getGroup()
+    {
+        return $this->_group;
+    }
+
+    public function getTable()
+    {
+        return $this->getGroup()->getTable();
+    }
+
+    public function createColumn(array $options = [])
+    {
+        $options = HtmlHelper::mergeOptions($this->defaultColumnOptions, $this->columnOptions, $options);
+
+        if (array_key_exists('class', $options))
+        {
+            $class = $options['class'];
+
+            unset($options['class']);
+        }
+        else
+        {
+            $class = static::TABLE_COLUMN;
+        }
+
+        return new $class($options, $this);
     }
 
     public function getColumns()
@@ -64,19 +96,7 @@ class TableRow extends \PhpTheme\Tag\Tag
             $return .= $column->toString();
         }
 
-        if ($return)
-        {
-            $return = PHP_EOL . $return . PHP_EOL;
-        }
-
         return $return;
-    }
-
-    public function createColumn(array $options = [])
-    {
-        $options = HtmlHelper::mergeOptions($this->columnOptions, $options);
-
-        return $this->_table->createColumn($options);
     }
 
 }

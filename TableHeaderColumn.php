@@ -6,11 +6,9 @@
  */
 namespace PhpTheme\Table;
 
-class TableBody extends BaseTableGroup
+class TableHeaderColumn extends BaseTableColumn
 {
 
-    const TABLE_ROW = TableBodyRow::class;
-
-    public $tag = 'tbody';
+    public $tag = 'th';
     
 }
