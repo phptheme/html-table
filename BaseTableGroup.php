@@ -70,16 +70,7 @@ abstract class BaseTableGroup extends \PhpTheme\Widget\Widget
     {
         $options = HtmlHelper::mergeOptions($this->defaultRowOptions, $this->rowOptions, $options);
 
-        if (array_key_exists('class', $options))
-        {
-            $class = $options['class'];
-
-            unset($options['class']);
-        }
-        else
-        {
-            $class = static::TABLE_ROW;
-        }
+        $class = $options['class'] ?? static::TABLE_ROW;
 
         return new $class($options, $this);
     }

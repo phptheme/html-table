@@ -44,16 +44,7 @@ abstract class BaseTableRow extends \PhpTheme\Widget\Widget
     {
         $options = HtmlHelper::mergeOptions($this->defaultColumnOptions, $this->columnOptions, $options);
 
-        if (array_key_exists('class', $options))
-        {
-            $class = $options['class'];
-
-            unset($options['class']);
-        }
-        else
-        {
-            $class = static::TABLE_COLUMN;
-        }
+        $class = $options['class'] ?? static::TABLE_COLUMN;
 
         return new $class($options, $this);
     }

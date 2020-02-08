@@ -33,32 +33,17 @@ class Table extends \PhpTheme\Widget\Widget
 
     public function getHeader()
     {
-        if (!$this->_header)
-        {
-            $this->_header = $this->createHeader($this->header);
-        }
-
-        return $this->_header;
+        return $this->_header ?? $this->_header = $this->createHeader($this->header);
     }
 
     public function getFooter()
     {
-        if (!$this->_footer)
-        {
-            $this->_footer = $this->createFooter($this->footer);
-        }
-
-        return $this->_footer;
+        return $this->_footer ?? $this->_footer = $this->createFooter($this->footer);
     }
 
     public function getBody()
     {
-        if (!$this->_body)
-        {            
-            $this->_body = $this->createBody($this->body);
-        }
-
-        return $this->_body;
+        return $this->_body ?? $this->_body = $this->createBody($this->body);
     }
 
     public function getContent()
@@ -70,48 +55,21 @@ class Table extends \PhpTheme\Widget\Widget
 
     protected function createBody(array $options = [])
     {
-        if (array_key_exists('class', $options))
-        {
-            $class = $options['class'];
-
-            unset($options['class']);
-        }
-        else
-        {
-            $class = static::TABLE_BODY;
-        }
+        $class = $options['class'] ?? static::TABLE_BODY;
 
         return new $class($options, $this);
     }
 
     protected function createHeader(array $options = [])
     {
-        if (array_key_exists('class', $options))
-        {
-            $class = $options['class'];
-
-            unset($options['class']);
-        }
-        else
-        {
-            $class = static::TABLE_HEADER;
-        }
+        $class = $options['class'] ?? static::TABLE_HEADER;
 
         return new $class($options, $this);
     }
 
     protected function createFooter(array $options = [])
     {
-        if (array_key_exists('class', $options))
-        {
-            $class = $options['class'];
-
-            unset($options['class']);
-        }
-        else
-        {
-            $class = static::TABLE_FOOTER;
-        }
+        $class = $options['class'] ?? static::TABLE_FOOTER;
 
         return new $class($options, $this);
     }
