@@ -1,2 +1,2 @@
 @echo off
-..\..\..\..\vendor\bin\phpunit.bat .
+start ..\..\..\..\vendor\bin\phpunit.bat .
