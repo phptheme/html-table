@@ -71,7 +71,7 @@ $table = new Table([
 echo $table->toString();
 ```
 
-####Result HTML:
+#### Result HTML:
 
 ```
 <table class="class_1 class_2">'
